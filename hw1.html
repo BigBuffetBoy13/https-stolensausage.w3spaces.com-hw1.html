@@ -1,0 +1,228 @@
+ <!DOCTYPE html>
+ <!--
+    Name:Diego Delgado
+    Date created:2/7/2025
+    Date last edited:2/9/2025
+    Version: 3
+    Description: Homework 1 HTML
+-->
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="hw1.css"> <!-- links to css file-->
+        <title>Houston Health</title>
+    </head>
+    <body>
+        <header>
+            <table width="100%">
+                <tr>
+                    <td valign="top" align="left" width="20%">
+                        <div class="image">
+                            <img align="center" src="HoustonHealth.jpg" alt="Hosuton Health">
+                        </div>
+                    </td>
+                    <td>
+                        <h2>Houston Health</h2>
+                    </td>
+                    <td valign="bottom" align="right" width="20%">
+                        <p>Today's Date: <span id="today"></span></p>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <hr>
+        <form action="thankyou.html">
+            <center>
+                <div class="format">
+                    <table>
+                        <tr>
+                            <th colspan="2">Create Account</th>
+                        </tr>
+                        <tr>
+                            <td><label for="fname">First Name:</label></td>
+                            <td>
+                                <input type="text" name="fname" maxlength="30" required placeholder="Diego">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mname">Middle Initial:</label></td>
+                            <td>
+                                <input type="text" name="mname" maxlength="1" optional placeholder="A">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="lname">Last Name:</label></td>
+                            <td>
+                                <input type="text" name="fname" maxlength="30" required placeholder="Delgado">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="pgender">Gender:</label></td>
+                            <td>
+                                <input type="radio" id="g1" name="pgender" value="Male"> Male
+                                <input type="radio" id="g2" name="pgender" value="Famale"> Female
+                                <input type="radio" id="g3" name="pgender" value="Other"> Other
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dob">Date of Birth:</label></td>
+                            <td>
+                                <input type="date" id="dob" name="dob">
+                            </td>
+                        </tr>
+                       <tr>
+                            <td><label for="ssn">Social Security Number:</label></td>
+                            <td>
+                                <input type="text" id="ssn" name="ssn" maxlength="11" placeholder="XXX-XX-XXXX" pattern="\d{3}-\d{2}-\d{4}" required>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td><label for="address1">Address Line 1:</label></td>
+                            <td>
+                                <input type="text" name="address1" id="address1" maxlength="30" required placeholder="1234 Address">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">City:</label></td>
+                            <td>
+                                <input type="text" name="city" id="city" maxlength="30" required placeholder="Houston">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="state">State:</label></td>
+                            <td>
+                                <select>
+                                    <option selected disabled>Please Select One</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                    <!-- Insert other options here -->
+                                </select>
+                            </td>
+                        </tr>
+                       <tr>
+                            <td><label for="zipcode">ZIP Code:</label></td>
+                            <td>
+                                <input type="text" name="zipcode" maxlength="5" required placeholder="00000">
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td><label for="history">Have you ever had:</label></td>
+                            <td>
+                                <input type="checkbox" id="option1" value="Chicken Pox"> Chicken Pox
+                                <input type="checkbox" id="option2" value="Flu"> Flu
+                                <input type="checkbox" id="option3" value="COVID-19"> COVID-19
+                                <input type="checkbox" id="option4" value="Measles"> Measles
+                                <input type="checkbox" id="option5" value="Ligma"> Ligma
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="notes">Additional Notes:</label></td>
+                            <td>
+                                <textarea id="notes" name="notes" rows="4" cols="35" placeholder="Enter any additional medical history or concerns here..."></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td1"><label for="range">How is your health?<br/>(rate from 1 to 10)</label></td>
+                            <td>
+                                <input
+                                type="range"
+                                name="range"
+                                id="range"
+                                min="1"
+                                max="10"
+                                value="0"
+                                />
+                                <span id="range-slider"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">E-mail:</label></td>
+                            <td>
+                                <input type="text" name="email" maxlength="30" required placeholder="johndoe@random.com">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone number">Phone Number:</label></td>
+                            <td>
+                                <input type="text" id="phone number" name="phone number" maxlength="12" placeholder="XXX-XXX-XXXX" pattern="\d{3}-\d{3}-\d{4}" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td1"><label for="uid">User ID:</label.></td>
+                                            <td>
+                                                <input
+                                                type="text"
+                                                name="uid"
+                                                id="uid"
+                                                maxlength="20"
+                                                required
+                                                title="Please enter a user ID"
+                                                placeholder="Your user ID"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="pword">Password:</label></td>
+                                            <td>
+                                                <input type="password" name="pword" id=pword" minlength="10" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <center>
+                                                    <input type="submit" name="submit">
+                                                    <input type="reset" name="reset">
+                                                </center>
+                                            </td>
+                                        </tr>
+                                        <footer>
+                                            <p>&#169; Houston Health <a href="contact.html">Contact Us!</a></p>
+                                        </footer>
+                                        <script src="hw1.js"></script>
